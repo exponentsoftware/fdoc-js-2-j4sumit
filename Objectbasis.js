@@ -49,10 +49,28 @@ const users = [
     ];
     
 
-function filter(arr)
-{
-let res = arr.filter((ar) => ar.scores> 85);
-console.log(res);
+// function filter(arr)
+// {
+// let res = arr.filter((ar) => ar.scores> 85);
+// console.log(res);
+// }
+
+// filter(users);
+
+const userupdate = {
+    name:'SUMIT',
+    scores:90,
+    skills:['HTM', 'CSS', 'JS'],
+    age:20
 }
 
-filter(users);
+
+function add(arr, userupdate)
+{
+    const found = arr.some(el => el.username === userupdate.name);
+    if (!found) {arr.push(userupdate)};
+console.log(arr);
+}
+
+add(users, userupdate);
+
